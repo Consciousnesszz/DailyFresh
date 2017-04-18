@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-cloak ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>DailyFresh</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/font_v54qaled3nv1jor/iconfont.css">
+	<script type="text/javascript" src="js/rem.js"></script>
+</head>
+<body>
+	
+	<div class="section" id="main" ng-controller="main">
+		<!--<div class="m-loader" ng-show="loader"></div>-->
+		<div class="m-content" ng-show="content">
+			<!------------header---------------->
+			<div class="m-header">
+				<div class="m-topad" ng-show="topad">
+					<img src="img/main/top-ad.jpg">
+					<p ng-click="disapear()"></p>
+				</div>
+				<div class="m-setaddr"></div>
+				<div class="m-nav">
+					<ul>
+						<li ng-class="{navactive:$index===curStatus}" ng-repeat="item in navlist" ng-click="navactive($index)">{{item}}</li>
+					</ul>
+				</div>
+			</div>
+			<!------------main---------------->
+			<div class="m-main">
+				<!--------banner-------->
+				<div class="m-banner"></div>
+				<div class="m-select"></div>
+				<!--------list-------->
+				<div class="m-list"></div>
+			</div>
+			<!------------footer---------------->
+			<div class="m-footer">
+				<ul>
+					<li ng-class="{footactive:$index===curPage}" ng-click="footactive($index)" ng-repeat="item in footlist">
+						<i class="{{item.class}}"></i><span>{{item.name}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	
+
+
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
