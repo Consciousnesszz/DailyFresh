@@ -1,0 +1,8 @@
+<!------------footer---------------->
+<div class="m-footer">
+	<ul>
+		<li ng-click="footactive($index)" ng-repeat="item in footlist">
+			<a href="{{item.loca}}" ng-class="{footactive:$index===curPage}"><i class="{{item.className}}"></i><span>{{item.name}}</span></a>
+		</li>
+	</ul>
+</div>

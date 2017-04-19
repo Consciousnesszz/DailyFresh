@@ -1,0 +1,92 @@
+<ion-content class="has-footer">
+	<div class="section" id="main" ng-controller="main">
+		<!--<div class="m-loader" ng-show="loader"></div>-->
+		<div class="m-content" ng-show="content">
+			<!------------header---------------->
+			<div class="m-header">
+				<div class="m-topad" ng-show="topad">
+					<img src="/src/img/main/top-ad.jpg">
+					<p ng-click="disapear()"></p>
+				</div>
+				<div class="m-setaddr">
+					<div class="m-s-center">
+						<a href="#">
+							<img src="/src/img/main/send.png">
+							<span>四川</span>
+							<i><img src="/src/img/main/down.png"></i>
+						</a>
+					</div>
+					<div class="m-s-right">
+						<a href="#">
+							<img src="/src/img/main/home-search-3x-black.png">
+						</a>
+					</div>
+				</div>
+				<div class="m-nav">
+					<ul>
+						<li ng-class="{navactive:$index===curStatus}" ng-repeat="item in navlist" ng-click="navactive($index)">{{item}}</li>
+					</ul>
+				</div>
+			</div>
+			<!------------main---------------->
+			<div class="m-main">
+				<!--------banner-------->
+				<div class="m-banner-wrap">
+					<ion-slide-box class="m-banner" on-slide-changed="bannerChange(index)">
+						<ion-slide>
+						    <div class="m-b-box"><img src="/src/img/main/banner1.jpg"></div>
+						</ion-slide>
+						<ion-slide>
+						    <div class="m-b-box"><img src="/src/img/main/banner2.jpg"></div>
+						</ion-slide>
+					</ion-slide-box>
+					<div class="page_num">
+						<span id="innernum">{{curBanner}}</span><span>/2</span>
+					</div>
+				</div>
+				<div class="m-select">
+					<div class="m-s-top">
+						<div class="m-s-chunk">
+							<img src="/src/img/main/3 (3).PNG">
+							<p>新人专享</p>
+						</div>
+						<div class="m-s-chunk">
+							<img src="/src/img/main/3 (2).PNG">
+							<p>邀请有礼</p>
+						</div>
+						<div class="m-s-chunk">
+							<img src="/src/img/main/3 (1).PNG">
+							<p>每日签到</p>
+						</div>
+						<div class="m-s-chunk">
+							<img src="/src/img/main/3 (4).PNG">
+							<p>会员任务</p>
+						</div>
+					</div>
+					<div class="m-s-bottom">
+						<span>小鲜说</span>
+						<p>{{tips}}</p>
+					</div>
+				</div>
+				<!--------list-------->
+				<div class="m-list">
+				    <a class="item item-thumbnail-left" href="#">
+				      <img src="cover.jpg">
+				      <h2>Pretty Hate Machine</h2>
+				      <p>Nine Inch Nails</p>
+				    </a>
+				    <a class="item item-thumbnail-left" href="#">
+				      <img src="cover.jpg">
+				      <h2>Pretty Hate Machine</h2>
+				      <p>Nine Inch Nails</p>
+				    </a>
+				    <a class="item item-thumbnail-left" href="#">
+				      <img src="cover.jpg">
+				      <h2>Pretty Hate Machine</h2>
+				      <p>Nine Inch Nails</p>
+				    </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>
