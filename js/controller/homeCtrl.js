@@ -7,6 +7,7 @@ app.controller('main', ['$scope', '$timeout', '$http', 'pageData', function(scop
 		scope.content = true;
 	},1000);*/
 
+
 	// header advertisement
 	scope.topad = true;
 	scope.disapear = function(){
@@ -29,6 +30,22 @@ app.controller('main', ['$scope', '$timeout', '$http', 'pageData', function(scop
 	// tips
 	scope.tips = "新希望香蕉牛奶200ml*6 安心特惠19.9元 添加蜂蜜的奶 自然的甜"
 
-//"<font color="#262626">所选商品实付满39，即可免运费哦"
+
+	scope.loadMore = function(){
+		console.log('abc');
+	}
+
+	// count
+	scope.minus = function(pro){
+		pro.num--;
+
+		pageData.setCartData(pro);
+	}
+	scope.plus = function(pro){
+		pro.num++;
+
+		pageData.setCartData(pro);
+	}
+
 
 }])

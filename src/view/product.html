@@ -1,0 +1,12 @@
+<div ng-show="pro.price" ng-repeat="pro in products" class="item item-thumbnail-left">
+  <img src="{{pro.images.list}}">
+  <h2>{{pro.name}}</h2>
+  <p>{{pro.subtitle}}</p>
+  <p><span>可用券价：￥{{pro.price / 100}}</span></p>
+  <p>
+  	<span>会员安心价：￥{{pro.vip_price / 100}}</span>
+  	<span ng-show="pro.num" ng-click="minus(pro)">-</span>
+  	<span ng-show="pro.num">{{pro.num}}</span>
+  	<span ng-click="plus(pro)">+</span>
+  </p>
+</div>
